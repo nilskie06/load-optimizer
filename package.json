@@ -1,0 +1,43 @@
+{
+  "name": "@ph-itdev/load-optimizer",
+  "version": "0.2026.0703",
+  "description": "Optimize truck load and pallet configurations using bin-packing heuristics to maximize space utilization for freight logistics.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "commonjs",
+  "bin": {
+    "load-optimizer": "bin/cli.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "bin/",
+    "example/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test.js",
+    "lint": "echo 'lint ok'",
+    "playground": "node bin/cli.js playground"
+  },
+  "keywords": [
+    "logistics",
+    "automation",
+    "shipping",
+    "supply-chain",
+    "load"
+  ],
+  "author": "@ph-itdev",
+  "license": "MIT \u00a9 Nilo Besingga",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilskie06/load-optimizer.git"
+  },
+  "homepage": "https://github.com/nilskie06/load-optimizer#readme",
+  "bugs": {
+    "url": "https://github.com/nilskie06/load-optimizer/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
