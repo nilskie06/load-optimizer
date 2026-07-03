@@ -50,4 +50,24 @@ function calculateLoadMetrics(container, { maxWeight = 45000, maxVolume = 2000 }
 }
 
 
+
+// ─── Auto-generated utility helpers ──────────────────────────────────────────
+function _logisticsHelpers() {
+  return {
+    timestamp: () => new Date().toISOString(),
+    uuid: () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+      const r = Math.random() * 16 | 0;
+      return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    }),
+    sleep: (ms) => new Promise(r => setTimeout(r, ms)),
+    retry: async (fn, maxAttempts = 3, delayMs = 1000) => {
+      for (let i = 0; i < maxAttempts; i++) {
+        try { return await fn(); } catch (e) { if (i === maxAttempts - 1) throw e; await new Promise(r => setTimeout(r, delayMs * (i + 1))); }
+      }
+    },
+    clamp: (val, min, max) => Math.min(Math.max(val, min), max),
+    chunk: (arr, size) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size)),
+  };
+}
+
 module.exports = { firstFitDecreasing, optimizePalletLayer, calculateLoadMetrics };
