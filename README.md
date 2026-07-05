@@ -28,6 +28,10 @@ MIT
 
 ## Changelog
 
+### v0.2026.705 (2026-07-05)
+- Added TypeScript type hints
+- Daily auto-update
+
 ### v0.2026.704 (2026-07-03)
 - Added usage examples
 - Daily auto-update
