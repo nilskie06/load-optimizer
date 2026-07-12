@@ -28,6 +28,10 @@ MIT
 
 ## Changelog
 
+### v0.2026.708 (2026-07-12)
+- Added input validation
+- Daily auto-update
+
 ### v0.2026.707 (2026-07-11)
 - Added default parameters
 - Daily auto-update
